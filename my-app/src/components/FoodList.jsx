@@ -1,3 +1,6 @@
+import FoodCard from "./FoodCard";
+
+
 let food = [
     "pizza",
     "hamburger",
@@ -14,13 +17,12 @@ let food = [
 export default function FoodList() {
     return (
         <section>
-            <ul>
                 {
                     food.map((element, index) => {
-                        return <li key = {index}>{element}</li>;
+                        return <p ><FoodCard key = {index} foodName = {element}/></p>;
                     })
                 }
-            </ul>
+
         </section>
     )
 }
